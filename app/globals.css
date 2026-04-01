@@ -144,5 +144,8 @@
   body {
     background-image: url('/Mobile.jpeg');
     background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
   }
 }
