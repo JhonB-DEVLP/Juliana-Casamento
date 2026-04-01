@@ -2,7 +2,7 @@
 
 import { AccordionSection } from "../accordion-section"
 import { GuestMessageBalloons } from "../guest-message-balloons"
-import { Heart, Baby, MessageSquare, Sparkles } from "lucide-react"
+import { Heart, Baby, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const RSVP_FORM_URL = process.env.NEXT_PUBLIC_RSVP_URL?.trim() || ""
@@ -68,9 +68,6 @@ export function InicioSection() {
 
       <AccordionSection title="Aos nossos filhos" icon={Baby}>
         <div className="prose prose-sm max-w-none">
-          <p className="text-foreground font-medium leading-relaxed">
-            Aos nossos filhos,
-          </p>
           <blockquote className="my-4 border-l-2 border-primary/30 pl-4 text-muted-foreground leading-relaxed">
             <p className="italic">
               E então Alice perguntou: &ldquo;Quanto tempo dura o que é
@@ -79,7 +76,7 @@ export function InicioSection() {
               E o Coelho respondeu: &ldquo;Às vezes, apenas um segundo.&rdquo;
             </p>
           </blockquote>
-          <p className="text-muted-foreground leading-relaxed mt-4">
+          <p className="text-muted-foreground leading-relaxed mt-12">
             Talvez o eterno não esteja no tempo.
             <br />
             Talvez ele exista nos instantes, aqueles que mudam tudo.
@@ -124,6 +121,7 @@ export function InicioSection() {
         </div>
       </AccordionSection>
 
+      {/* Gratidão — oculto por agora. Para voltar: descomentar e readicionar Sparkles ao import do lucide-react.
       <AccordionSection title="Gratidão" icon={Sparkles}>
         <div className="prose prose-sm max-w-none">
           <p className="text-muted-foreground leading-relaxed">
@@ -141,6 +139,7 @@ export function InicioSection() {
           </p>
         </div>
       </AccordionSection>
+      */}
 
       <AccordionSection title="Um carinho para os noivos" icon={MessageSquare}>
         <GuestMessageBalloons />

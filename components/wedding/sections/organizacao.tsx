@@ -29,9 +29,8 @@ export function OrganizacaoSection() {
           <div className="bg-primary/5 rounded-xl p-4 border border-primary/10">
             <h4 className="font-medium text-foreground mb-2">Músicas Especiais</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>🎵 <strong>Primeira Dança:</strong> Perfect - Ed Sheeran</li>
-              <li>🎵 <strong>Valsa com os Pais:</strong> What a Wonderful World - Louis Armstrong</li>
-              <li>🎵 <strong>Nossa Música:</strong> Thinking Out Loud - Ed Sheeran</li>
+              <li>🎵 <strong>Primeira Dança:</strong> João Gomes- Flor de flamboyant</li>
+              <li>🎵 <strong>Nossa Música:</strong> Mestrinho e Mariana Aydar- Preciso do seu sorriso</li>
             </ul>
           </div>
 
