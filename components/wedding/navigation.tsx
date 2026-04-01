@@ -58,7 +58,7 @@ export function Navigation({ activeSection, onSectionChange }: NavigationProps) 
         <div className="max-w-6xl mx-auto px-4">
           {/* Mobile header */}
           <div className="flex items-center justify-between h-16 md:hidden">
-            <span className="font-serif text-lg text-foreground">C & R</span>
+            <span className="font-serif text-lg text-foreground">F & J</span>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-foreground"

@@ -73,12 +73,7 @@ export default function WeddingPage() {
               </p>
             )}
             {activeSection === "cerimonia" && (
-              <div className="mt-3 space-y-4">
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  Pedimos gentilmente pontualidade, pois a cerimônia terá início no horário previsto.
-                  <br />
-                  Para maior comodidade, disponibilizaremos serviço de manobrista no local.
-                </p>
+              <div className="mt-3">
                 <div className="bg-muted/30 rounded-xl p-3">
                   <img
                     src="/Igreja.png"

@@ -40,7 +40,7 @@ export function AccordionSection({
       <div 
         className={cn(
           "overflow-hidden transition-all duration-300",
-          isOpen ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[6000px] opacity-100" : "max-h-0 opacity-0"
         )}
       >
         <div className="px-5 pb-5 pt-2 border-t border-border/30">

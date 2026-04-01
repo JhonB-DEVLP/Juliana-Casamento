@@ -19,7 +19,7 @@ const greatVibes = Great_Vibes({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#e8b4b8',
+  themeColor: '#6b705c',
   width: 'device-width',
   initialScale: 1,
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import { AccordionSection } from "../accordion-section"
-import { Heart, Shirt, BookOpen, Calendar, Clock, Camera, Gift, CheckCircle2, AlertCircle } from "lucide-react"
+import { Heart, Shirt, BookOpen, Clock, Camera, Gift, CheckCircle2, AlertCircle } from "lucide-react"
 
 const padrinhos = [
   { nome: "Vladimir", madrinha: "Thalita" },
@@ -18,51 +18,45 @@ const responsabilidades = [
     items: [
       "Confirmar presença até 30 dias antes",
       "Providenciar a vestimenta seguindo o dress code",
-      "Participar do ensaio (data a confirmar)",
-      "Estar disponível para ajudar os noivos se necessário",
     ]
   },
   {
     titulo: "No Dia da Cerimônia",
     items: [
-      "Chegar à igreja com 30 minutos de antecedência",
-      "Ajudar na organização do cortejo",
+      "Pedimos a gentileza de se programarem para chegar com antecedência, considerando possíveis imprevistos.",
+      "Este dia foi preparado com muito carinho, e a cerimônia terá início pontualmente no horário previsto.",
       "Estar atento às instruções do cerimonialista",
-      "Segurar as alianças até o momento da troca",
-      "Assinar como testemunha no livro de registros",
+      "Durante a cerimônia, assinam como testemunhas do livro: Mirtes e Gilberto.",
     ]
   },
   {
     titulo: "Na Festa",
     items: [
-      "Participar das brincadeiras e incentivar os convidados",
-      "Ajudar a animar a pista de dança",
-      "Estar disponível para fotos com os noivos",
-      "Aproveitar e se divertir muito!",
+      "Participar das brincadeiras",
+      "Durante a festa, aproveitem.",
     ]
   }
 ]
 
 const dicas = [
   {
-    icon: Calendar,
-    titulo: "Agenda",
-    descricao: "Marque na agenda: ensaio dia 10/08 às 18h na igreja"
-  },
-  {
     icon: Clock,
     titulo: "Pontualidade",
-    descricao: "Chegar com antecedência é fundamental para evitar imprevistos"
+    descricao:
+      "Pedimos, com carinho, que nossos padrinhos cheguem com antecedência, para que tudo flua com tranquilidade.",
   },
   {
     icon: Camera,
     titulo: "Fotos",
-    descricao: "Haverá sessão de fotos especial com padrinhos após a cerimônia"
+    descricao:
+      "Após a cerimônia, pedimos que nossos padrinhos permaneçam na igreja para um momento especial de fotos.",
   },
   {
     icon: Gift,
-    titulo: "Presente",
-    descricao: "A lista de presentes está disponível na loja X ou via PIX"
+    titulo: "Presentes",
+    descricao: "Não esperamos presentes.",
+    descricaoContinuacao:
+      "A alegria de estarmos juntos já torna este dia completo, e isso, para nós, é o suficiente.",
   },
 ]
 
@@ -78,7 +72,7 @@ export function PadrinhosSection() {
             tão especial.
           </p>
           <p className="text-foreground italic font-medium mt-3">
-          Recebam nosso carinho e nossa gratidão 
+            Recebam nosso carinho e nossa gratidão.
             <br />
             <span className="font-couple mt-3">Flávio & Juliana</span>
           </p>
@@ -112,14 +106,12 @@ export function PadrinhosSection() {
           <div className="bg-primary/5 rounded-xl p-5 border border-primary/10">
             <h4 className="font-medium text-foreground mb-3">👗 Madrinhas</h4>
             <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-              <p>Querida madrinha, é uma alegria ter voce ao nosso lado neste dia tão especial.</p>
+              <p>Ter você ao nosso lado nos enche de alegria.</p>
               <p>
-                Para a ocasião, sugerimos <strong className="text-primary">vestidos longos</strong>, a sua escolha.
+                Sinta-se à vontade para escolher o vestido que mais lhe agrade, priorizando modelos longos.
               </p>
               <p>
-                Pedimos a gentileza de evitar <strong className="text-foreground">branco (e tons semelhantes)</strong>,
-                {" "}
-                <strong className="text-red-700">preto e cores neon</strong>.
+                Pedimos apenas a gentileza de evitar a cor branca (ou tons semelhantes), preto e cores neon.
               </p>
             </div>
           </div>
@@ -128,11 +120,10 @@ export function PadrinhosSection() {
           <div className="bg-accent/5 rounded-xl p-5 border border-accent/10">
             <h4 className="font-medium text-foreground mb-3">🤵 Padrinhos</h4>
             <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-              <p>Querido padrinho, é uma alegria ter voce ao nosso lado neste dia tão especial.</p>
+              <p>Querido padrinho, é uma alegria ter você ao nosso lado neste dia tão especial.</p>
               <p>
                 Para a ocasião, sugerimos <strong className="text-primary">traje formal</strong>,
-                composto por terno completo preto (paleto, colete e calca),
-                camisa branca e gravata preta.
+                composto por terno completo preto (paletó, colete e calça), camisa branca e gravata preta.
               </p>
             </div>
           </div>
@@ -191,6 +182,9 @@ export function PadrinhosSection() {
                     <div>
                       <h4 className="font-medium text-foreground mb-1">{dica.titulo}</h4>
                       <p className="text-sm text-muted-foreground">{dica.descricao}</p>
+                      {"descricaoContinuacao" in dica && dica.descricaoContinuacao ? (
+                        <p className="text-sm text-muted-foreground mt-2">{dica.descricaoContinuacao}</p>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -202,10 +196,11 @@ export function PadrinhosSection() {
             <div className="flex items-start gap-4">
               <AlertCircle className="w-6 h-6 text-gold shrink-0" />
               <div>
-                <h4 className="font-medium text-foreground mb-2">Lembrete Importante</h4>
+                <h4 className="font-medium text-foreground mb-2">Lembrete importante</h4>
                 <p className="text-sm text-muted-foreground">
-                  Qualquer dúvida, entrem em contato diretamente conosco ou com nossa
-                  cerimonialista <strong>Ana Paula</strong> pelo WhatsApp: (11) 99999-9999
+                  Se precisar de qualquer orientação, nossa assessoria estará à disposição:
+                  <br />
+                  <span className="mt-1 inline-block">Elienay — (81) 8927-4349</span>
                 </p>
               </div>
             </div>

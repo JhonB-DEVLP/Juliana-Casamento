@@ -10,6 +10,9 @@ next.user-config.*
 # Environment variables
 .env*.local
 
+# Mensagens dos convidados (não versionar conteúdo real)
+data/guest-messages.json
+
 # Common ignores
 node_modules
 .next/

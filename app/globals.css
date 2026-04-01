@@ -4,37 +4,33 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Paleta romântica de casamento */
-  --background: #F3EEE9;
-  --foreground: #7E8B75;
-  --card: oklch(1 0 0);
-  --card-foreground: #7E8B75;
-  --popover: oklch(1 0 0);
-  --popover-foreground: #7E8B75;
-  /* Verde oliva como cor primária */
-  --primary: #7E8B75;
-  --primary-foreground: #F3EEE9;
-  /* Creme/Off-white como secundário */
-  --secondary: oklch(0.96 0.01 80);
-  --secondary-foreground: oklch(0.35 0.03 60);
-  --muted: oklch(0.94 0.01 80);
-  --muted-foreground: #7E8B75;
-  /* Accent harmonizado no oliva */
-  --accent: #8D9A84;
-  --accent-foreground: #F3EEE9;
-  /* Dourado */
-  --gold: oklch(0.75 0.12 85);
-  --gold-foreground: #7E8B75;
+  /* Paleta: oliva (títulos, botões, destaques), bege (fundo), dourado (detalhes), cinza quente (textos corridos), branco (sobre primário) */
+  --background: #f5f1ea;
+  --foreground: #6b705c;
+  --card: #ffffff;
+  --card-foreground: #6b705c;
+  --popover: #ffffff;
+  --popover-foreground: #6b705c;
+  --primary: #6b705c;
+  --primary-foreground: #ffffff;
+  --secondary: #ede8df;
+  --secondary-foreground: #5f5f5f;
+  --muted: #ebe6dc;
+  --muted-foreground: #5f5f5f;
+  --accent: #787e6f;
+  --accent-foreground: #ffffff;
+  --gold: #c6a96b;
+  --gold-foreground: #5f5f5f;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.90 0.02 60);
-  --input: oklch(0.92 0.01 60);
-  --ring: #7E8B75;
-  --chart-1: #7E8B75;
-  --chart-2: #8D9A84;
-  --chart-3: oklch(0.75 0.12 85);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --destructive-foreground: #ffffff;
+  --border: #e3ddd3;
+  --input: #e8e3d9;
+  --ring: #6b705c;
+  --chart-1: #6b705c;
+  --chart-2: #787e6f;
+  --chart-3: #c6a96b;
+  --chart-4: #8a8578;
+  --chart-5: #5f5f5f;
   --radius: 0.75rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -132,11 +128,10 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    box-shadow-color: rgb(126 139 117 / 0.22);
+    box-shadow-color: rgb(107 112 92 / 0.2);
   }
   body {
-    @apply text-foreground;
-    background-color: #F3EEE9;
+    @apply bg-background text-muted-foreground;
     background-image: url('/Desktop.jpeg');
     background-size: cover;
     background-position: center;

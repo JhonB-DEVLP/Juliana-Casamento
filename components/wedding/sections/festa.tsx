@@ -3,12 +3,12 @@
 import { AccordionSection } from "../accordion-section"
 import { Timeline } from "../timeline"
 import { MenuCard } from "../menu-card"
-import { 
-  Clock, 
-  PartyPopper, 
-  UtensilsCrossed, 
-  Cake, 
-  Wine, 
+import {
+  Clock,
+  PartyPopper,
+  UtensilsCrossed,
+  Cake,
+  Wine,
   IceCream,
   Wifi,
   Grid3X3
@@ -29,17 +29,6 @@ const menuPrincipal = [
   { name: "Estação refrescante" },
   { name: "Sabores quentes" },
   { name: "Doces" },
-]
-
-const menuDoces = [
-  { name: "Bem-casado" },
-  { name: "Brigadeiro tradicional" },
-  { name: "Beijinho de coco" },
-  { name: "Cajuzinho" },
-  { name: "Morango com chocolate" },
-  { name: "Camafeu de nozes" },
-  { name: "Trufa de maracujá" },
-  { name: "Quindim" },
 ]
 
 const menuBebidas = [
@@ -76,35 +65,56 @@ export function FestaSection() {
       </AccordionSection>
 
       <AccordionSection title="Menu Principal" icon={UtensilsCrossed}>
-        <p className="text-base text-muted-foreground leading-relaxed mb-4">
-          Nosso cardápio foi cuidadosamente pensado para esta noite. Sinta-se à vontade para explorar os sabores e aproveitar cada detalhe.
-        </p>
-        <MenuCard title="Pratos Principais" items={menuPrincipal} />
+        <p className="text-base text-muted-foreground leading-relaxed">
+          Nosso cardápio foi cuidadosamente pensado para esta noite.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed mb-4">
+            Sinta-se à vontade para explorar os sabores e aproveitar cada detalhe.
+          </p>
+          <MenuCard title="Pratos Principais" items={menuPrincipal} />
       </AccordionSection>
 
       <AccordionSection title="Menu de Doces" icon={Cake}>
-        <MenuCard title="Mesa de Doces" items={menuDoces} />
-        <div className="mt-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+        <p className="text-base text-muted-foreground leading-relaxed">
+          Uma seleção pensada para ser descoberta aos poucos, com sabores para serem apreciados ao longo da noite.
+        </p>
+        <p className="text-base text-muted-foreground leading-relaxed mb-4">
+          
+        </p>
+        <div className="p-4 bg-primary/5 rounded-xl border border-primary/10">
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Bolo de Casamento:</strong> Massa de chocolate com recheio de brigadeiro belga, decorado com flores naturais.
+            <strong className="text-foreground">Bolo:</strong> Bolo de noiva
+            tradicional pernambucano
           </p>
         </div>
       </AccordionSection>
 
       <AccordionSection title="Carta de Drinks" icon={Wine}>
+        <p className="text-base text-muted-foreground leading-relaxed">
+          Pensamos em drinks que acompanhassem a noite.
+        </p>
         <p className="text-base text-muted-foreground leading-relaxed mb-4">
-          Pensamos em drinks que acompanhassem a noite, sabores leves e marcantes para descobrir, experimentar e celebrar.
+          Sabores leves e marcantes para descobrir, experimentar e celebrar.
         </p>
         <MenuCard title="Bebidas" items={menuBebidas} />
       </AccordionSection>
 
       <AccordionSection title="Estações da noite" icon={IceCream}>
-        <div className="bg-muted/30 rounded-xl p-5">
-          <ul className="space-y-3 text-base text-muted-foreground leading-relaxed list-disc pl-6">
-            <li>Caldinho (sabores quentes)</li>
-            <li>Mesa americana</li>
-            <li>Estação refrescante</li>
-          </ul>
+        <div className="space-y-4">
+          <div className="rounded-xl bg-muted/30 p-5">
+            <h4 className="mb-2 font-medium text-foreground">
+              Estação de gelados
+            </h4>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Sabores leves e refrescantes, perfeitos para a noite.
+            </p>
+          </div>
+          <div className="rounded-xl bg-muted/30 p-5">
+            <h4 className="mb-2 font-medium text-foreground">Estação quente</h4>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Caldos variados, servidos ao longo da noite.
+            </p>
+          </div>
         </div>
       </AccordionSection>
 
@@ -116,13 +126,13 @@ export function FestaSection() {
             <p className="text-lg font-mono text-foreground mb-1">FlavioEJuliana2026</p>
             <p className="text-sm text-muted-foreground">Senha: <span className="font-mono">amor2026</span></p>
           </div>
-          
+
           <div className="bg-muted/30 rounded-xl p-4">
             <h4 className="font-medium text-foreground mb-3">Informações Úteis</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📍 <strong>Local:</strong> Loft Boa viagem - Rua Cap. Rebelinho, 159 - 51011-010</li>
+              <li>📍 <strong>Local:</strong> Loft Boa Viagem — Rua Cap. Rebelinho, 159 - 51011-010</li>
               <li>🚗 <strong>Estacionamento:</strong> Gratuito no local (valet disponível)</li>
-              <li>🩺 <strong>Emergência:</strong> Disponibilizaremos kits de primeiros socorros, que estarão disponíveis nos toaletes.</li>
+              <li>🩺 <strong>Emergência:</strong> Disponibilizaremos kits de primeiros socorros nos toaletes.</li>
             </ul>
             <div className="mt-4 aspect-video bg-muted rounded-xl overflow-hidden">
               <iframe
@@ -164,9 +174,9 @@ export function FestaSection() {
               { mesa: "①", nomes: "Flávio, Juliana, Mariana e Léo" },
               { mesa: "②", nomes: "Solange, Flávio, Sávia, Nilda, Selma, Jacy, Phillipe, Bruno, Renata e Fábio" },
               { mesa: "③", nomes: "Geane, Mirtes, Gilberto, Dona Bernadete, Geraldo, Gilson, Gerson e Matheus" },
-              { mesa: "④", nomes: "Thalita Vila Real, Biguga, Nilzinha e acompanhante das mesas" },
-              { mesa: "⑤", nomes: "Pedro, Dyo, Neto, Thiago, Ana Beatriz, Andrea Carla e Cecilia" },
-              { mesa: "⑥", nomes: "Camila, Letuzia, Alexandre, Rafael, Carol, Aryanne e João Lucas" },
+              { mesa: "④", nomes: "Thalita, Biguga, Nilzinha e Maria" },
+              { mesa: "⑤", nomes: "Pedro, Dyo, Neto, Thiago, Ana Beatriz, Andréa Carla, Cecília, Ronaldo e Glorinha" },
+              { mesa: "⑥", nomes: "Camila, Letícia, Alexandre, Rafael, Carol, Aryanne e João Lucas" },
               { mesa: "⑦", nomes: "Isis, Bruno e Isabelle" },
               { mesa: "⑧", nomes: "Thalita Lima, Murillo, Marinna e Otávio" },
               { mesa: "⑨", nomes: "Julianna, Ivana, Bruno, Maria Alice, Andrews, Julianno, Fátima e Marcos" },

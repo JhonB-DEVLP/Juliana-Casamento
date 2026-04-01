@@ -43,7 +43,7 @@ export function SpotifyPlayer() {
           <div className="mt-2">
             <iframe
               style={{ borderRadius: "10px" }}
-              src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0"
+              src="https://open.spotify.com/embed/playlist/1hY9uGXXZxnfoJwvjY26ye?utm_source=generator&theme=0"
               width="100%"
               height="80"
               frameBorder="0"

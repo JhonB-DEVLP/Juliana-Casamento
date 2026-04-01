@@ -1,9 +1,33 @@
 "use client"
 
+import { useCallback, useEffect, useRef, useState } from "react"
 import { AccordionSection } from "../accordion-section"
-import { Music, QrCode } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Check, Copy, Music, QrCode } from "lucide-react"
+
+const PIX_KEY = "81983708000"
 
 export function OrganizacaoSection() {
+  const [pixCopied, setPixCopied] = useState(false)
+  const copyResetRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const copyPixKey = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(PIX_KEY)
+      setPixCopied(true)
+      if (copyResetRef.current) clearTimeout(copyResetRef.current)
+      copyResetRef.current = setTimeout(() => setPixCopied(false), 2000)
+    } catch {
+      setPixCopied(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (copyResetRef.current) clearTimeout(copyResetRef.current)
+    }
+  }, [])
+
   return (
     <div className="space-y-4">
       <AccordionSection title="Nossa Playlist" icon={Music} defaultOpen>
@@ -15,7 +39,7 @@ export function OrganizacaoSection() {
           <div className="bg-muted/30 rounded-xl overflow-hidden">
             <iframe
               style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0"
+              src="https://open.spotify.com/embed/playlist/1hY9uGXXZxnfoJwvjY26ye?utm_source=generator&theme=0"
               width="100%"
               height="352"
               frameBorder="0"
@@ -48,25 +72,48 @@ export function OrganizacaoSection() {
             Cada chave custa R$20,00 e uma delas abre o cofre com um prêmio especial.
           </p>
 
-          {/* QR Code Display */}
           <div className="bg-card rounded-xl p-8 border border-border/50 text-center">
-            <div className="inline-block bg-card p-4 rounded-xl shadow-sm border border-border">
-              {/* QR Code Placeholder - será substituído pelo real */}
-              <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center mx-auto">
-                <div className="text-center">
-                  <QrCode className="w-16 h-16 text-muted-foreground mx-auto mb-2" />
-                  <p className="text-xs text-muted-foreground">QR Code PIX</p>
-                </div>
-              </div>
+            <div className="inline-block bg-card p-3 rounded-xl shadow-sm border border-border">
+              <img
+                src="/QrCode.jpeg"
+                alt="QR Code PIX — brincadeira Chave do Cofre"
+                width={220}
+                height={220}
+                className="mx-auto max-w-[min(100%,220px)] h-auto rounded-lg object-contain"
+                loading="lazy"
+              />
             </div>
             
             <div className="mt-6 space-y-2">
               <p className="text-sm text-muted-foreground">
                 Escaneie o QR Code acima ou use a chave PIX:
               </p>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted rounded-lg">
-                <span className="font-mono text-sm text-foreground">casamento@camilaerafael.com</span>
+              <div className="inline-flex items-center gap-1 rounded-lg bg-muted py-1.5 pl-4 pr-1">
+                <span className="font-mono text-sm text-foreground tabular-nums">
+                  {PIX_KEY}
+                </span>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon-sm"
+                  className="shrink-0 text-muted-foreground hover:text-foreground"
+                  onClick={copyPixKey}
+                  aria-label={
+                    pixCopied ? "Chave PIX copiada" : "Copiar chave PIX"
+                  }
+                >
+                  {pixCopied ? (
+                    <Check className="size-4 text-primary" aria-hidden />
+                  ) : (
+                    <Copy className="size-4" aria-hidden />
+                  )}
+                </Button>
               </div>
+              {pixCopied ? (
+                <p className="text-xs text-primary font-medium" role="status">
+                  Chave copiada!
+                </p>
+              ) : null}
             </div>
           </div>
 
@@ -79,10 +126,6 @@ export function OrganizacaoSection() {
               <li>No momento da brincadeira, tente abrir o cofre!</li>
             </ol>
           </div>
-
-          <p className="text-xs text-muted-foreground text-center">
-            O valor arrecadado ajuda os noivos na lua de mel! 🌴✈️
-          </p>
         </div>
       </AccordionSection>
     </div>

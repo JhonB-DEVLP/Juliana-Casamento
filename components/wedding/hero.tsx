@@ -32,7 +32,7 @@ export function Hero() {
 
         {/* Names */}
         <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">
-          Celebrando o nosso amor
+          Celebramos o que nos trouxe até aqui
         </p>
 
         <h1 className="font-couple text-5xl md:text-7xl lg:text-8xl text-foreground mb-2">
