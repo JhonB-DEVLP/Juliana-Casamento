@@ -142,7 +142,13 @@
 
 @media (max-width: 768px) {
   body {
-    background-image: url('/Mobile.jpeg');
+    background-image: image-set(
+      url('/Mobile.jpeg') 1x,
+      url('/Mobile@2x.jpeg') 2x
+    );
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-attachment: scroll;
   }
 }
