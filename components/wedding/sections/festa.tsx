@@ -1,8 +1,10 @@
 "use client"
 
+import { useCallback, useEffect, useRef, useState } from "react"
 import { AccordionSection } from "../accordion-section"
 import { Timeline } from "../timeline"
 import { MenuCard } from "../menu-card"
+import { Button } from "@/components/ui/button"
 import {
   Clock,
   PartyPopper,
@@ -11,8 +13,12 @@ import {
   Wine,
   IceCream,
   Wifi,
-  Grid3X3
+  Grid3X3,
+  Check,
+  Copy,
 } from "lucide-react"
+
+const PIX_KEY_CHAVE_COFRE = "81983708000"
 
 const cronogramaFesta = [
   { time: "22:00", title: "Boas-vindas e acomodação", description: "Recepção dos convidados no salão" },
@@ -40,6 +46,26 @@ const menuBebidas = [
 ]
 
 export function FestaSection() {
+  const [pixCopied, setPixCopied] = useState(false)
+  const copyResetRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const copyPixKey = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(PIX_KEY_CHAVE_COFRE)
+      setPixCopied(true)
+      if (copyResetRef.current) clearTimeout(copyResetRef.current)
+      copyResetRef.current = setTimeout(() => setPixCopied(false), 2000)
+    } catch {
+      setPixCopied(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (copyResetRef.current) clearTimeout(copyResetRef.current)
+    }
+  }, [])
+
   return (
     <div className="space-y-4">
       <AccordionSection title="Cronograma da Festa" icon={Clock} defaultOpen>
@@ -47,19 +73,84 @@ export function FestaSection() {
       </AccordionSection>
 
       <AccordionSection title="Brincadeiras" icon={PartyPopper}>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <p className="text-base text-muted-foreground leading-relaxed">
             Preparamos alguns momentos especiais para tornar a noite ainda mais leve e divertida.
           </p>
+
+          <div className="space-y-4">
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Participe da brincadeira da <strong>Chave do Cofre</strong>! Cada
+              chave custa R$20,00 e uma delas abre o cofre com um prêmio
+              especial.
+            </p>
+
+            <div className="bg-card rounded-xl p-6 md:p-8 border border-border/50 text-center">
+              <p className="text-sm font-medium text-foreground mb-4">
+                QR Code PIX — brincadeira Chave do Cofre
+              </p>
+              <div className="inline-block bg-card p-3 rounded-xl shadow-sm border border-border">
+                <img
+                  src="/QrCode.jpeg"
+                  alt="QR Code PIX — brincadeira Chave do Cofre"
+                  width={220}
+                  height={220}
+                  className="mx-auto max-w-[min(100%,220px)] h-auto rounded-lg object-contain"
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="mt-6 space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  Escaneie o QR Code acima ou use a chave PIX:
+                </p>
+                <div className="inline-flex items-center gap-1 rounded-lg bg-muted py-1.5 pl-4 pr-1">
+                  <span className="font-mono text-sm text-foreground tabular-nums">
+                    {PIX_KEY_CHAVE_COFRE}
+                  </span>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon-sm"
+                    className="shrink-0 text-muted-foreground hover:text-foreground"
+                    onClick={copyPixKey}
+                    aria-label={
+                      pixCopied ? "Chave PIX copiada" : "Copiar chave PIX"
+                    }
+                  >
+                    {pixCopied ? (
+                      <Check className="size-4 text-primary" aria-hidden />
+                    ) : (
+                      <Copy className="size-4" aria-hidden />
+                    )}
+                  </Button>
+                </div>
+                {pixCopied ? (
+                  <p className="text-xs text-primary font-medium" role="status">
+                    Chave copiada!
+                  </p>
+                ) : null}
+              </div>
+            </div>
+
+            <div className="bg-accent/5 rounded-xl p-4 border border-accent/10">
+              <h4 className="font-medium text-foreground mb-2">
+                Como funciona?
+              </h4>
+              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                <li>Faça o PIX de R$20,00 por chave</li>
+                <li>Informe seu nome na descrição</li>
+                <li>Retire sua chave com a equipe</li>
+                <li>No momento da brincadeira, tente abrir o cofre!</li>
+              </ol>
+            </div>
+          </div>
+
           <div className="bg-muted/25 rounded-2xl px-5 py-6 md:px-7 md:py-7">
-            <ul className="space-y-6 text-base text-muted-foreground leading-relaxed list-disc pl-6">
-              <li>
-                Teremos uma brincadeira com um presente especial; chaves estarão disponíveis e apenas uma delas abrirá a caixa.
-              </li>
-              <li>
-                Um espaço foi preparado para registros da noite: tire sua foto, deixe uma mensagem e faça parte da nossa lembrança.
-              </li>
-            </ul>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Um espaço foi preparado para registros da noite: tire sua foto,
+              deixe uma mensagem e faça parte da nossa lembrança.
+            </p>
           </div>
         </div>
       </AccordionSection>

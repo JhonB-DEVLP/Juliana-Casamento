@@ -13,14 +13,14 @@ import {
 } from "lucide-react"
 
 const cronogramaCerimonia = [
-  { time: "15:30", title: "Chegada dos Convidados", description: "Recepção na entrada da igreja" },
-  { time: "16:00", title: "Entrada do Noivo", description: "Flávio entra acompanhado de sua mãe" },
-  { time: "16:05", title: "Entrada das Damas e Pajens", description: "Cortejo das crianças e damas" },
-  { time: "16:10", title: "Entrada da Noiva", description: "Juliana entra acompanhada de seu pai" },
-  { time: "16:15", title: "Início da Cerimônia", description: "Celebração religiosa" },
-  { time: "17:00", title: "Votos e Bênçãos", description: "Troca de alianças e votos" },
-  { time: "17:15", title: "Assinatura do Livro", description: "Registro civil" },
-  { time: "17:30", title: "Saída dos Noivos", description: "Chuva de pétalas" },
+  { time: "19:30", title: "Chegada dos convidados", description: "Recepção na entrada" },
+  { time: "20:00", title: "Entrada do noivo", description: "Flávio entra acompanhado de sua mãe" },
+  { time: "20:03", title: "Entrada dos padrinhos e madrinhas" },
+  { time: "20:07", title: "Cortejo das crianças/Damas e pajens" },
+  { time: "20:10", title: "Entrada da noiva", description: "Juliana" },
+  { time: "20:12", title: "Início da cerimônia" },
+  { time: "20:30", title: "Celebração", description: "Votos e troca de alianças. Assinatura do livro" },
+  { time: "20:45", title: "Saída dos noivos", description: "Chuva de pétalas" },
 ]
 
 const cortejo = [

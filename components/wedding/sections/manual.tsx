@@ -1,5 +1,8 @@
 "use client"
 
+import { AccordionSection } from "../accordion-section"
+import { Hotel } from "lucide-react"
+
 export function ManualSection() {
   return (
     <div className="space-y-4">
@@ -33,6 +36,44 @@ export function ManualSection() {
           envolvente.
         </p>
       </div>
+
+      <AccordionSection title="Dicas de hospedagem" icon={Hotel}>
+        <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <p>
+            Para os nossos convidados que vêm de outras cidades ou que desejam aproveitar a festa com mais tranquilidade, selecionamos algumas opções de hospedagem próximas ao local da festa.
+          </p>
+          <p>
+            Escolhemos com carinho para que sua estadia no Recife seja tão especial quanto o nosso dia.
+          </p>
+
+          <ul className="space-y-4 list-none pl-0 mt-4">
+            <li className="rounded-xl border border-border/50 bg-muted/20 p-4">
+              <p className="font-medium text-foreground">Ibis Boa Viagem</p>
+              <p className="mt-2">
+                <span className="text-foreground/90">Endereço:</span> Av. Domingos Ferreira, 683 - Pina, Recife.
+              </p>
+              <p className="mt-1">
+                <span className="text-foreground/90">Telefone:</span> (81) 3334-3434
+              </p>
+              <p className="mt-2 text-xs sm:text-sm">
+                <span className="font-medium text-foreground">Dica:</span> É uma opção prática e bem localizada, próxima a bons restaurantes.
+              </p>
+            </li>
+            <li className="rounded-xl border border-border/50 bg-muted/20 p-4">
+              <p className="font-medium text-foreground">Vivaz Boutique Hotel</p>
+              <p className="mt-2">
+                <span className="text-foreground/90">Endereço:</span> Rua Capitão Rebelinho, 374 - Pina, Recife.
+              </p>
+              <p className="mt-1">
+                <span className="text-foreground/90">WhatsApp/Telefone:</span> (81) 3097-7332
+              </p>
+              <p className="mt-2 text-xs sm:text-sm">
+                <span className="font-medium text-foreground">Dica:</span> Uma opção mais charmosa, pertinho da praia.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </AccordionSection>
     </div>
   )
 }

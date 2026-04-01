@@ -2,7 +2,7 @@
 
 import { AccordionSection } from "../accordion-section"
 import { GuestMessageBalloons } from "../guest-message-balloons"
-import { Heart, Baby, Hotel, MessageSquare } from "lucide-react"
+import { Heart, Baby, MessageSquare, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const RSVP_FORM_URL = process.env.NEXT_PUBLIC_RSVP_URL?.trim() || ""
@@ -66,108 +66,84 @@ export function InicioSection() {
         </div>
       </AccordionSection>
 
-      <AccordionSection title="Dicas de hospedagem" icon={Hotel}>
-        <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-          <p>
-            Para os nossos convidados que vêm de outras cidades ou que desejam aproveitar a festa com mais tranquilidade, selecionamos algumas opções de hospedagem próximas ao local da festa.
-          </p>
-          <p>
-            Escolhemos com carinho para que sua estadia no Recife seja tão especial quanto o nosso dia.
-          </p>
-
-          <ul className="space-y-4 list-none pl-0 mt-4">
-            <li className="rounded-xl border border-border/50 bg-muted/20 p-4">
-              <p className="font-medium text-foreground">Ibis Boa Viagem</p>
-              <p className="mt-2">
-                <span className="text-foreground/90">Endereço:</span> Av. Domingos Ferreira, 683 - Pina, Recife.
-              </p>
-              <p className="mt-1">
-                <span className="text-foreground/90">Telefone:</span> (81) 3334-3434
-              </p>
-              <p className="mt-2 text-xs sm:text-sm">
-                <span className="font-medium text-foreground">Dica:</span> É uma opção prática e bem localizada, próxima a bons restaurantes.
-              </p>
-            </li>
-            <li className="rounded-xl border border-border/50 bg-muted/20 p-4">
-              <p className="font-medium text-foreground">Vivaz Boutique Hotel</p>
-              <p className="mt-2">
-                <span className="text-foreground/90">Endereço:</span> Rua Capitão Rebelinho, 374 - Pina, Recife.
-              </p>
-              <p className="mt-1">
-                <span className="text-foreground/90">WhatsApp/Telefone:</span> (81) 3097-7332
-              </p>
-              <p className="mt-2 text-xs sm:text-sm">
-                <span className="font-medium text-foreground">Dica:</span> Uma opção mais charmosa, pertinho da praia.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </AccordionSection>
-
-      <AccordionSection title="Um Carinho para os noivos" icon={MessageSquare}>
-        <GuestMessageBalloons />
-      </AccordionSection>
-
-      <AccordionSection title="Aos meus filhos" icon={Baby}>
+      <AccordionSection title="Aos nossos filhos" icon={Baby}>
         <div className="prose prose-sm max-w-none">
           <p className="text-foreground font-medium leading-relaxed">
-            Aos meus filhos:
+            Aos nossos filhos,
           </p>
           <blockquote className="my-4 border-l-2 border-primary/30 pl-4 text-muted-foreground leading-relaxed">
             <p className="italic">
-              &ldquo;E então Alice perguntou: &lsquo;Quanto tempo dura o que é
-              eterno?&rsquo;
+              E então Alice perguntou: &ldquo;Quanto tempo dura o que é
+              eterno?&rdquo;
               <br />
-              E o Coelho respondeu: &lsquo;Às vezes, apenas um
-              segundo.&rsquo;&rdquo;
+              E o Coelho respondeu: &ldquo;Às vezes, apenas um segundo.&rdquo;
             </p>
           </blockquote>
           <p className="text-muted-foreground leading-relaxed mt-4">
-            Meus filhos,
-          </p>
-          <p className="text-muted-foreground leading-relaxed mt-3">
             Talvez o eterno não esteja no tempo.
             <br />
-            Talvez ele exista nos instantes.
+            Talvez ele exista nos instantes, aqueles que mudam tudo.
             <br />
-            Aqueles que mudam tudo.
-            <br />
-            Vocês foram assim para mim.
+            Vocês foram assim para nós.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
-            No instante em que chegaram, tudo em mim mudou.
+            Não foi o tempo, simplesmente, que nos transformou:
             <br />
-            Não apenas a minha vida, mas a forma como eu vejo, sinto e existo
-            no mundo.
+            foi o instante em que vocês chegaram, um momento só, suficiente para
+            nos mudar por inteiro.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
-            Com vocês, eu entendi que o amor não é único.
+            Desde então, o mundo passou a ter outro sentido.
             <br />
-            Ele se revela de maneiras diferentes.
-            <br />
-            No jeito de cada um, nas muitas palavras da Mariana e no silêncio
-            do Léo.
+            A forma de ver, de agir, de existir… tudo ganhou outro significado.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
-            Vocês deram um novo sentido a tudo.
+            Com vocês, aprendemos que o amor se revela de maneiras diferentes,
             <br />
-            E, em vocês, encontrei algo que levei muito tempo para compreender:
-            o amor.
+            no jeito de cada um.
+            <br />
+            Nas muitas palavras da Mariana e no silêncio do Léo.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
-            Que esse amor acompanhe vocês por toda a vida.
+            Então, o que é eterno deixou de ser uma ideia distante
             <br />
-            Que sigam livres e sejam felizes.
-            <br />
-            E, por onde forem, levem com vocês a certeza de que eu e seu pai os
-            amamos profundamente.
+            e passou a existir dentro da nossa casa.
           </p>
-          <p className="text-foreground font-medium mt-6">
-            Com amor,
+          <p className="text-muted-foreground leading-relaxed mt-3">
+            Que vocês cresçam livres.
             <br />
-            Mamãe.
+            Que encontrem o próprio caminho.
+            <br />
+            E que, em cada um desses instantes que a vida oferece, vocês
+            consigam reconhecer o que realmente importa.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-3">
+            Por onde forem, levem com vocês a certeza de que seu pai e sua mãe
+            estarão sempre aqui e que vocês serão eternamente amados.
           </p>
         </div>
+      </AccordionSection>
+
+      <AccordionSection title="Gratidão" icon={Sparkles}>
+        <div className="prose prose-sm max-w-none">
+          <p className="text-muted-foreground leading-relaxed">
+            Agradecemos de coração a cada pessoa que caminhou ao nosso lado —
+            pelos abraços, pelos conselhos, pelas risadas e pelos silêncios que
+            também consolam.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-3">
+            Este dia existe porque vocês existem na nossa história. Obrigados
+            por celebrar conosco e por fazerem parte do que mais importa para
+            nós.
+          </p>
+          <p className="text-foreground font-medium mt-4">
+            Com gratidão, <span className="font-couple">Flávio & Juliana</span>
+          </p>
+        </div>
+      </AccordionSection>
+
+      <AccordionSection title="Um carinho para os noivos" icon={MessageSquare}>
+        <GuestMessageBalloons />
       </AccordionSection>
     </div>
   )

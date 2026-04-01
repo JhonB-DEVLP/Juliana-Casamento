@@ -17,7 +17,6 @@ const responsabilidades = [
     titulo: "Antes do Casamento",
     items: [
       "Confirmar presença até 30 dias antes",
-      "Providenciar a vestimenta seguindo o dress code",
     ]
   },
   {
@@ -32,7 +31,6 @@ const responsabilidades = [
   {
     titulo: "Na Festa",
     items: [
-      "Participar das brincadeiras",
       "Durante a festa, aproveitem.",
     ]
   }

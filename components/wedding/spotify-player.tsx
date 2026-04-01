@@ -1,4 +1,4 @@
- "use client"
+"use client"
 
 import { useEffect, useState } from "react"
 
@@ -32,7 +32,7 @@ export function SpotifyPlayer() {
           <span className="text-xs text-muted-foreground">Nossa Playlist</span>
           <button
             type="button"
-            onClick={() => setIsCompact(prev => !prev)}
+            onClick={() => setIsCompact((prev) => !prev)}
             className="rounded-md border border-border/70 px-2 py-1 text-xs text-foreground transition hover:bg-muted"
             aria-label={isCompact ? "Mostrar player" : "Ocultar player"}
           >

@@ -2,15 +2,15 @@
 
 import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
-import { 
-  Home, 
-  Church, 
-  PartyPopper, 
-  Users, 
-  BookOpen, 
+import {
+  Home,
+  Church,
+  PartyPopper,
+  Users,
+  BookOpen,
   Settings2,
   Menu,
-  X
+  X,
 } from "lucide-react"
 
 const sections = [
@@ -49,7 +49,7 @@ export function Navigation({ activeSection, onSectionChange }: NavigationProps) 
       {/* Desktop Navigation */}
       <nav 
         className={cn(
-          "fixed top-3 left-0 right-0 z-50 transition-all duration-300",
+          "fixed top-0 py-3 left-0 right-0 z-50 transition-all duration-300",
           isScrolled 
             ? "bg-card/95 backdrop-blur-md shadow-sm border-b border-border/50" 
             : "bg-transparent"
