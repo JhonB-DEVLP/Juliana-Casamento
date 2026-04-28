@@ -6,11 +6,11 @@ import { Hotel } from "lucide-react"
 export function ManualSection() {
   return (
     <div className="space-y-4">
-      <div className="rounded-xl border border-border/50 bg-muted/30 p-6 md:p-8">
+      <div className="rounded-xl border border-border/50 bg-card p-6 md:p-8">
         <h3 className="mb-6 text-center font-serif text-xl text-foreground md:text-2xl">
           Para aproveitar melhor a noite
         </h3>
-        <div className="rounded-2xl bg-muted/25 px-5 py-6 md:px-7 md:py-7">
+        <div className="rounded-2xl bg-card px-5 py-6 md:px-7 md:py-7">
           <div className="mb-8 border-b border-border/40 pb-8">
             <h4 className="mb-2 font-medium text-foreground">Dress code</h4>
             <p className="text-base leading-relaxed text-muted-foreground">

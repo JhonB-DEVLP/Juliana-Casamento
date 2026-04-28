@@ -24,7 +24,7 @@ const responsabilidades = [
     items: [
       "Pedimos a gentileza de se programarem para chegar com antecedência, considerando possíveis imprevistos.",
       "Este dia foi preparado com muito carinho, e a cerimônia terá início pontualmente no horário previsto.",
-      "Estar atento às instruções do cerimonialista",
+      "Estar atento às instruções da cerimonialista",
       "Durante a cerimônia, assinam como testemunhas do livro: Mirtes e Gilberto.",
     ]
   },

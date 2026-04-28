@@ -26,14 +26,6 @@ export function OrganizacaoSection() {
             />
           </div>
 
-          <div className="bg-primary/5 rounded-xl p-4 border border-primary/10">
-            <h4 className="font-medium text-foreground mb-2">Músicas Especiais</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>🎵 <strong>Primeira Dança:</strong> João Gomes- Flor de flamboyant</li>
-              <li>🎵 <strong>Nossa Música:</strong> Mestrinho e Mariana Aydar- Preciso do seu sorriso</li>
-            </ul>
-          </div>
-
           <p className="text-xs text-muted-foreground text-center">
             Tem uma sugestão de música? Fale com os noivos! 🎶
           </p>

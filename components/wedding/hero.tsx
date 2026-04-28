@@ -52,10 +52,10 @@ export function Hero() {
         {/* Date */}
         <div className="space-y-2 mb-12">
           <p className="text-lg md:text-xl text-muted-foreground">
-            31 de outubro de 2026
+            Sábado, 31 de outubro de 2026
           </p>
           <p className="text-sm text-muted-foreground/80">
-            Sábado, às 20h
+            Às 20h.
           </p>
         </div>
 

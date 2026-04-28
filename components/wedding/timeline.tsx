@@ -26,7 +26,7 @@ export function Timeline({ items, className }: TimelineProps) {
             <span className="text-sm font-medium text-primary">{item.time}</span>
             <h4 className="font-medium text-foreground mt-1">{item.title}</h4>
             {item.description && (
-              <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+              <p className="text-sm text-muted-foreground mt-1 whitespace-pre-line">{item.description}</p>
             )}
           </div>
         </div>

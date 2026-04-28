@@ -14,21 +14,26 @@ import {
 
 const cronogramaCerimonia = [
   { time: "19:30", title: "Chegada dos convidados", description: "Recepção na entrada" },
-  { time: "20:00", title: "Entrada do noivo", description: "Flávio entra acompanhado de sua mãe" },
+  { time: "20:00", title: "Entrada do noivo", description: "Flávio entrará acompanhado de sua mãe Solange" },
   { time: "20:03", title: "Entrada dos padrinhos e madrinhas" },
   { time: "20:07", title: "Cortejo das crianças/Damas e pajens" },
   { time: "20:10", title: "Entrada da noiva", description: "Juliana" },
   { time: "20:12", title: "Início da cerimônia" },
-  { time: "20:30", title: "Celebração", description: "Votos e troca de alianças. Assinatura do livro" },
+  { time: "20:30", title: "Celebração", description: "Votos\nTroca de alianças\nAssinatura do livro" },
   { time: "20:45", title: "Saída dos noivos", description: "Chuva de pétalas" },
 ]
 
 const cortejo = [
   { ordem: 1, nome: "Padre Dom Marcelo Gomes", funcao: "Celebrante" },
-  { ordem: 2, nome: "Flávio", funcao: "Noivo com Solange (Mãe)" },
-  { ordem: 3, nome: "João Lucas e Leonardo", funcao: "Pajens" },
-  { ordem: 4, nome: "Maria Valentina, Cecília e Mariana", funcao: "Damas de Honra" },
-  { ordem: 5, nome: "Juliana", funcao: "Noiva com Gilberto (Tio)" },
+  { ordem: 2, nome: "Família do noivo", funcao: "Flávio e Solange" },
+  { ordem: 3, nome: "Família da noiva", funcao: "Geane e Gilberto" },
+  { ordem: 4, nome: "João Lucas e Leonardo", funcao: "Pajens" },
+  { ordem: 5, nome: "Maria Valentina, Maria Cecília e Mariana Vila Real", funcao: "Damas de Honra" },
+  {
+    ordem: 6,
+    nome: "Vladimir & Thalita\nGerson Neto & Carla\nOtávio & Thalita\nFábio & Sávia\nPedro & Camila\nPhillipe & Jacy Anne",
+    funcao: "Padrinhos",
+  },
 ]
 
 export function CerimoniaSection() {
@@ -85,7 +90,7 @@ export function CerimoniaSection() {
                 <span className="text-sm font-medium text-primary">{pessoa.ordem}</span>
               </div>
               <div>
-                <p className="font-medium text-foreground">{pessoa.nome}</p>
+                <p className="font-medium text-foreground whitespace-pre-line">{pessoa.nome}</p>
                 <p className="text-sm text-muted-foreground">{pessoa.funcao}</p>
               </div>
             </div>
@@ -191,11 +196,11 @@ export function CerimoniaSection() {
         <div className="bg-muted/30 rounded-xl p-6">
           <div className="text-center space-y-4 text-muted-foreground">
             <p className="font-serif text-lg text-foreground">
-              Salmo responsorial:
+              Salmo responsorial: 
             </p>
             <p className="italic text-base leading-relaxed">
-              &ldquo;O Senhor fez grandes coisas por nós, e por isso estamos
-              alegres.&rdquo;
+            &ldquo;O Senhor fez grandes coisas por nós, por isso estamos
+              alegres.&rdquo; (Sl 126:3)
             </p>
           </div>
         </div>

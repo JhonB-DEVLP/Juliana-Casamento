@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Great_Vibes } from 'next/font/google'
+import { Great_Vibes, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpotifyPlayer } from '@/components/wedding/spotify-player'
 import './globals.css'
 
-const cormorantGaramond = Cormorant_Garamond({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-body',
   display: 'swap',
 })
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${cormorantGaramond.variable} ${greatVibes.variable}`}>
+    <html lang="pt-BR" className={`${playfairDisplay.variable} ${greatVibes.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <SpotifyPlayer />

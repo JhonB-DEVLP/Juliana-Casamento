@@ -14,9 +14,14 @@ export function Footer() {
           Flávio & Juliana
         </h2>
 
-        <p className="text-muted-foreground mb-6">
-          31 de outubro de 2026
-        </p>
+        <div className="mb-6 space-y-1">
+          <p className="text-muted-foreground">
+            Sábado, 31 de outubro de 2026
+          </p>
+          <p className="text-sm text-muted-foreground/80">
+            Às 20h.
+          </p>
+        </div>
 
         <p className="text-2xs text-muted-foreground mt-8 mb-24">
           Hoje, escolhemos celebrar o que nos trouxe até aqui.
