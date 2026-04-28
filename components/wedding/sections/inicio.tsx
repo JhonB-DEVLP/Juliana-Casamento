@@ -19,15 +19,16 @@ export function InicioSection() {
             É uma alegria ter você aqui.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
-            Este dia foi sonhado por muitos anos.
-            E, se você recebeu este convite, é porque em algum momento cruzou o nosso caminho e fez parte dele.
+            Se você recebeu este convite, é porque faz parte da nossa vida.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
-            Por um ano e meio, planejamos cada detalhe para celebrar tudo o que nos trouxe até aqui, ao lado de quem faz parte da nossa vida.
-            O que começou de forma despretensiosa ganhou força e um novo significado ao ser compartilhado com vocês. Preparamos tudo com carinho para marcar um encontro que um dia parecia passageiro, mas se transformou em uma história que, há quatorze anos, segue sendo escrita.
+            Cuidamos de cada detalhe para viver tudo isso ao lado de quem é importante para nós.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-3">
+            Celebre este momento conosco.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-4">
-            Com amor, <span className="font-couple">Flávio & Juliana</span>
+            <span className="font-couple">Flávio & Juliana</span>
           </p>
         </div>
 
