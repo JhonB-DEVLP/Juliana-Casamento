@@ -26,7 +26,7 @@ export function InicioSection() {
             Por um ano e meio, planejamos cada detalhe para celebrar tudo o que nos trouxe até aqui, ao lado de quem faz parte da nossa vida.
             O que começou de forma despretensiosa ganhou força e um novo significado ao ser compartilhado com vocês. Preparamos tudo com carinho para marcar um encontro que um dia parecia passageiro, mas se transformou em uma história que, há quatorze anos, segue sendo escrita.
           </p>
-          <p className="text-foreground font-medium mt-4">
+          <p className="text-muted-foreground leading-relaxed mt-4">
             Com amor, <span className="font-couple">Flávio & Juliana</span>
           </p>
         </div>
