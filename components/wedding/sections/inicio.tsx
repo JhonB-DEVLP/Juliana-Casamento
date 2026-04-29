@@ -69,14 +69,12 @@ export function InicioSection() {
 
       <AccordionSection title="Aos nossos filhos" icon={Baby}>
         <div className="prose prose-sm max-w-none">
-          <blockquote className="my-4 border-l-2 border-primary/30 pl-4 text-muted-foreground leading-relaxed">
-            <p className="italic">
-              E então Alice perguntou: &ldquo;Quanto tempo dura o que é eterno?&rdquo;
-              <br />
-              E o Coelho respondeu: &ldquo;Às vezes, apenas um segundo.&rdquo;
-            </p>
-          </blockquote>
-          <p className="text-muted-foreground leading-relaxed mt-12">
+          <p className="text-muted-foreground leading-relaxed italic">
+            E então Alice perguntou: &ldquo;Quanto tempo dura o que é eterno?&rdquo;
+            <br />
+            E o Coelho respondeu: &ldquo;Às vezes, apenas um segundo.&rdquo;
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-6">
             Talvez o eterno não esteja no tempo.
             <br />
             Talvez ele exista nos instantes.
@@ -90,7 +88,7 @@ export function InicioSection() {
             <br />
             foi a chegada de vocês.
             <br />
-            Um instante só, e nada mais foi igual.
+            Um instante só e nada mais foi igual.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
             Desde então, tudo passou a ter outro sentido.
@@ -110,15 +108,14 @@ export function InicioSection() {
             <br />
             Que encontrem o próprio caminho.
             <br />
-            E que, nos pequenos instantes da vida, possam reconhecer o que
-            realmente importa.
+            E que, nos pequenos instantes da vida, possam reconhecer o que realmente importa.
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
             Por onde forem, levem com vocês a certeza:
             <br />
-            estaremos sempre aqui.
+            estaremos sempre aqui,
             <br />
-            E vocês terão o nosso amor até a eternidade.
+            e vocês terão o nosso amor até a eternidade.
           </p>
         </div>
       </AccordionSection>

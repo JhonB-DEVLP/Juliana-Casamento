@@ -24,15 +24,15 @@ const cronogramaCerimonia = [
 ]
 
 const cortejo = [
-  { ordem: 1, nome: "Padre Dom Marcelo Gomes", funcao: "Celebrante" },
+  { ordem: 1, nome: "Celebrante", funcao: "Padre Dom Marcelo Gomes" },
   { ordem: 2, nome: "Família do noivo", funcao: "Flávio e Solange" },
   { ordem: 3, nome: "Família da noiva", funcao: "Geane e Gilberto" },
-  { ordem: 4, nome: "João Lucas e Leonardo", funcao: "Pajens" },
-  { ordem: 5, nome: "Maria Valentina, Maria Cecília e Mariana Vila Real", funcao: "Damas de Honra" },
+  { ordem: 4, nome: "Pajens", funcao: "João Lucas e Leonardo" },
+  { ordem: 5, nome: "Damas de Honra", funcao: "Maria Valentina, Maria Cecília e Mariana Vila Real" },
   {
     ordem: 6,
-    nome: "Vladimir & Thalita\nGerson Neto & Carla\nOtávio & Thalita\nFábio & Sávia\nPedro & Camila\nPhillipe & Jacy Anne",
-    funcao: "Padrinhos",
+    nome: "Padrinhos",
+    funcao: "Vladimir & Thalita\nGerson Neto & Carla\nOtávio & Thalita\nFábio & Sávia\nPedro & Camila\nPhillipe & Jacy Anne",
   },
 ]
 
@@ -244,7 +244,7 @@ export function CerimoniaSection() {
           <div className="bg-muted/30 rounded-lg p-4">
             <h5 className="font-medium text-foreground mb-1">Saída</h5>
             <p className="text-sm text-muted-foreground">
-              Ao final, pedimos que aguarde a orientação do cerimonial para a
+              Ao final, pedimos que aguarde a orientação da cerimonialista para a
               saída, que contará com o apoio de manobristas.
             </p>
           </div>
