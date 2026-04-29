@@ -113,9 +113,7 @@ export function InicioSection() {
           <p className="text-muted-foreground leading-relaxed mt-3">
             Por onde forem, levem com vocês a certeza:
             <br />
-            estaremos sempre aqui,
-            <br />
-            e vocês terão o nosso amor até a eternidade.
+            estaremos sempre aqui, e vocês terão o nosso amor até a eternidade.
           </p>
         </div>
       </AccordionSection>
